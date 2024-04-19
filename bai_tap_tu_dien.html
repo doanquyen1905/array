@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label htmlFor="string">Nhập từ: </label>
+<input type="text" name="" id="string"/>
+<button onClick="transcript()">Dịch</button>
+<p id="result"></p>
+<script>
+
+    let english = ["apple", "banana", "orange", "pen", "book"];
+    let vietNamese = ["táo", "chuối", "cam", "bút", "sách"];
+    let string = document.getElementById('string').value;
+    let result = "";
+    let check = false
+    function transcript() {
+        for (let i = 0; i < english.length; i++) {
+                if (string == english[i]) {
+                    for (let j = 0; j < vietNamese.length; j++) {
+                        if (i == j) {
+                            result = vietNamese[i];
+                            check = true;
+                            break;
+                        }
+                    } break;
+                }
+        }
+        if (check = true) {
+            document.getElementById('result').innerHTML = result
+        } else { check = false;
+            document.getElementById('result').innerHTML = "không tìm thấy"
+        }
+    }
+
+</script>
+</body>
+</html>

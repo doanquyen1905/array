@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sum = 0;
+    let point = "";
+    let namestudent = ""
+    let number = +prompt("nhập số lượng học sinh");
+    for (let name = 1; name <= number ; name++) {
+        namestudent = prompt("nhap tên học sinh");
+        do {
+            point = +prompt("nhập điểm trung bình của " + namestudent)
+        } while (isNaN(point) || point <0 || point>10);
+        sum = sum + point;
+    }
+    let avgclass = sum / number;
+    alert("điểm trung bình lớp là " + avgclass);
+</script>
+
+</body>
+</html>
