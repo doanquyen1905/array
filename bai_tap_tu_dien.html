@@ -10,28 +10,26 @@
 <button onClick="transcript()">Dịch</button>
 <p id="result"></p>
 <script>
-
+    function transcript() {
     let english = ["apple", "banana", "orange", "pen", "book"];
     let vietNamese = ["táo", "chuối", "cam", "bút", "sách"];
     let string = document.getElementById('string').value;
     let result = "";
-    let check = false
-    function transcript() {
+        let check = false
         for (let i = 0; i < english.length; i++) {
                 if (string == english[i]) {
                     for (let j = 0; j < vietNamese.length; j++) {
                         if (i == j) {
                             result = vietNamese[i];
                             check = true;
-                            break;
                         }
-                    } break;
+                    }
                 }
         }
-        if (check = true) {
+        if (check == true) {
             document.getElementById('result').innerHTML = result
-        } else { check = false;
-            document.getElementById('result').innerHTML = "không tìm thấy"
+        } if (check ==false) {
+            document.getElementById('result').innerHTML= "không tìm thấy"
         }
     }
 
